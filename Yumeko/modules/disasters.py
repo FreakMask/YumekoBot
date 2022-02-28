@@ -24,7 +24,7 @@ from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "lunaBot/elevated_users.json")
+ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "Yumeko/elevated_users.json")
 
 
 def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
@@ -461,7 +461,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 @run_async
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Hunters:</b>\n"
+    reply = "<b>Known as Hunters🐺:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -480,7 +480,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Bounty Hunters:</b>\n"
+    reply = "<b>Known as Bounty Hunters🐯:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -502,7 +502,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
-    reply = "<b>Known Zoldycks:</b>\n"
+    reply = "<b>Known as Zoldycks👺:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -521,7 +521,7 @@ def sudolist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Zodiacs:</b>\n"
+    reply = "<b>Known as Zodiacs🐉:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
