@@ -14,12 +14,12 @@ from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from Yumeko import (
-    TROUPE_MEMBER,
-    BLACKLISTED_HUNTER,
-    ZODIAC,
-    ZOLDYCK,
-    BOUNTY_HUNTER,
-    HUNTER,
+    DEV_USERS,
+    OWNER_ID,
+    DRAGONS,
+    DEMONS,
+    TIGERS,
+    WOLVES,
     INFOPIC,
     dispatcher,
     sw,
@@ -286,22 +286,22 @@ def info(update: Update, context: CallbackContext):
 
     disaster_level_present = True
 
-    if user.id == BLACKLISTED_HUNTER:
+    if user.id == OWNER_ID:
         text += "\n\nThis Spider🕸️ is the head of 'Phantom Troupes'."
         disaster_level_present = True
-    elif user.id in TROUPE_MEMBER:
+    elif user.id in DEV_USERS:
         text += "\n\nThis Spider🕸️ is member of 'Phantom Troupes'."
         disaster_level_present = True
-    elif user.id in ZODIAC:
+    elif user.id in DRAGONS:
         text += "\n\nThe Access level of this Spider🕸️ is 'Zodiac'."
         disaster_level_present = True
-    elif user.id in ZOLDYCK:
+    elif user.id in DEMONS:
         text += "\n\nThe Access level of this Spider🕸️ is 'Zoldyck'."
         disaster_level_present = True
-    elif user.id in BOUNTY_HUNTER:
+    elif user.id in WOLVES:
         text += "\n\nThe Access level of this Spider🕸️ is 'Bounty Hunter'."
         disaster_level_present = True
-    elif user.id in HUNTER:
+    elif user.id in TIGERS:
         text += "\n\nThe Access level of this Spider🕸️ is 'Hunter'."
         disaster_level_present = True
 
