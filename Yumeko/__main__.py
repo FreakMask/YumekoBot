@@ -106,7 +106,7 @@ HELP_STRINGS = """
 » /help: Sends this message; I'll tell you more about myself.
 
 All commands can either be used with / or !.
-If you want to report any bugs or need any help with setting up Yumeko, reach us at here"""
+If you want to report any bugs or need any help with setting up Chrollo, reach us at here @Phantom_Troupes"""
 
 
 
