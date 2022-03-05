@@ -65,7 +65,7 @@ async def drawText(image_path, text):
 
     else:
 
-        fnt = "github.com/DarkSoulxUltra/EmikoRobot/resources/default.ttf"
+        fnt = "./Yumeko/resources/default.ttf"
 
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
