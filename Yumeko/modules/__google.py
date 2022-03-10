@@ -105,7 +105,7 @@ async def okgoogle(img):
         return
 
     if photo:
-        dev = await img.reply("`Searching in Hunter Database...`")
+        dev = await img.reply("`Searching in Phantom Database...`")
         try:
             image = Image.open(photo)
         except OSError:
@@ -122,7 +122,7 @@ async def okgoogle(img):
 
         if response != 400:
             await dev.edit(
-                "`Finding data in Hunter Database. Please wait.`"
+                "`Finding data in Phantom Database. Please wait.`"
                 "\n`Parsing source now. wait.`"
             )
         else:
@@ -275,5 +275,5 @@ async def apk(e):
         await e.reply("Exception Occured:- " + str(err))
 
 
-__mod_name__ = "sᴇᴀʀᴄʜ"
+__mod_name__ = "Search"
 
