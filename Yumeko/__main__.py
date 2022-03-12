@@ -499,11 +499,11 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_setup":
         query.message.edit_text(
-            text=f"""｢ Setup Guide 」
-You can add me to your group by clicking this link and selecting the chat.
-Read Admin Permissions and Anti-spam for basic info.
-Read Detailed Setup Guide to learn about setting up the bot in detail. (Recommended)
-If you do need help with further instructions feel free to ask in @Phantom_Troupes.""",
+            text=f"｢ Setup Guide 」\n"
+            f"You can add me to your group by clicking this link and selecting the chat.\n"
+            f"Read Admin Permissions and Anti-spam for basic info.\n"
+            f"Read Detailed Setup Guide to learn about setting up the bot in detail. (Recommended)\n"
+            f"If you do need help with further instructions feel free to ask in @Phantom_Troupes.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
