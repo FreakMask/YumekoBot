@@ -399,13 +399,13 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_basichelp":
         query.message.edit_text(
-            text=f"**──「 Basic Guide 」──**"
-            f"\n\n1.) first, add me to your group.\n"
-            f"2.) then promote me as admin and give all permissions except anonymous admin.\n"
-            f"3.) after promoting me, type /reload in group to update the admin list.\n"
-            f"4.) for any kind of problems head straight to @Phantom_Troupes.\n"
-            f"5.) make sure to read rules and follow them in Phantom Troupes.\n"
-            f"\n📌 Spamming, promotion are considered hostile in Phantom Troupes,and will result you in Gban and report to Telegram.",
+            text="""**──「 Basic Guide 」──**"
+            \n\n1.) first, add me to your group.
+            \n2.) then promote me as admin and give all permissions except anonymous admin.
+            \n3.) after promoting me, type /reload in group to update the admin list.
+            \n4.) for any kind of problems head straight to @Phantom_Troupes.
+            \n5.) make sure to read rules and follow them in Phantom Troupes.
+            \n📌 Spamming, promotion are considered hostile in Phantom Troupes,and will result you in Gban and report to Telegram.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -426,14 +426,14 @@ def yumeko_about_callback(update, context):
         )
     elif query.data == "yumeko_admin":
         query.message.edit_text(
-            text=f"**──「 Basic Guide 」──**"
-            f"\n\n/play (song name) - play song from youtube"
-            f"\n/ytp (song name) - play song directly from"
-            f"\nB/stream (reply to audio) - play song using audio file."
-            f"\n/playlist - show the list song in queue"
-            f"\n/song (song name) - download song from youtube."
-            f"\n/search (video name) - search video from youtube detailed."
-            f"\n/lyric - (song name) lyrics scrapper",
+            text="""**──「 Basic Guide 」──**"
+            \n\n/play (song name) - play song from youtube
+            \n/ytp (song name) - play song directly from
+            \nB/stream (reply to audio) - play song using audio file.
+            \n/playlist - show the list song in queue
+            \n/song (song name) - download song from youtube.
+            \n/search (video name) - search video from youtube detailed.
+            \n/lyric - (song name) lyrics scrapper""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -443,12 +443,12 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_notes":
         query.message.edit_text(
-            text=f"──「 Advanced CMD 」──\n\n"
-            f"/start (in group) - see the bot alive status"
-            f"\n/reload - reload bot and refresh the admin list"
-            f"\n/ping - check the bot ping status"
-            f"\n/uptime - check the bot uptime status"
-            f"\n/id - show the group/user id & other",
+            text="""──「 Advanced CMD 」──\n
+            \n/start (in group) - see the bot alive status
+            \n/reload - reload bot and refresh the admin list
+            \n/ping - check the bot ping status
+            \n/uptime - check the bot uptime status
+            \n/id - show the group/user id & other""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="yumeko_basichelp")]]
@@ -456,19 +456,19 @@ def yumeko_about_callback(update, context):
         )
     elif query.data == "yumeko_support":
         query.message.edit_text(
-            text=f"──「 Admin CMD 」──\n"
-            f"\n/player - show the music playing status"
-            f"\n/pause - pause the music streaming"
-            f"\n/resume - resume the music was paused"
-            f"\n/skip - skip to the next song"
-            f"\n/end - stop music streaming"
-            f"\n/join - invite userbot join to your group"
-            f"\n/leave - order the userbot to leave your group"
-            f"\n/auth - authorized user for using music bot"
-            f"\n/unauth - unauthorized for using music bot"
-            f"\n/control - open the player settings panel"
-            f"\n/delcmd (on | off) - enable / disable del cmd feature"
-            f"\n/music (on / off) - disable / enable music player in your group",
+            text="""──「 Admin CMD 」──\n
+            \n/player - show the music playing status
+            \n/pause - pause the music streaming
+            \n/resume - resume the music was paused
+            \n/skip - skip to the next song
+            \n/end - stop music streaming
+            \n/join - invite userbot join to your group
+            \n/leave - order the userbot to leave your group
+            \n/auth - authorized user for using music bot
+            \n/unauth - unauthorized for using music bot
+            \n/control - open the player settings panel
+            \n/delcmd (on | off) - enable / disable del cmd feature
+            \n/music (on / off) - disable / enable music player in your group""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -481,8 +481,8 @@ def yumeko_about_callback(update, context):
         )
     elif query.data == "yumeko_credit":
         query.message.edit_text(
-            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Hunter Dᴇᴠ's` </b>\n"
-            f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ CHROLLO",
+            text=f"""<b> `Cʀᴇᴅɪᴛ Fᴏʀ Hunter Dᴇᴠ's` </b>\n"
+            \nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ CHROLLO""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -495,8 +495,7 @@ def yumeko_about_callback(update, context):
                     InlineKeyboardButton(text="Support", url="https://t.me/Phantom_Troupes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="yumeko_basichelp"),
-                 
+                    InlineKeyboardButton(text="Back", callback_data="yumeko_basichelp"),    
                  ]
                 ]
             ),
@@ -523,12 +522,12 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_del":
         query.message.edit_text(
-            text=f"｢ Admin Permissions 」\n"
-                     f"\nTo avoid slowing down, Chrollo caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Chrollo will only find out ~10 minutes later.\n"
-                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Chrollo to check who the admins are again and their permissions\n"
-                    f"\nIf you are getting a message saying:\nYou must be this chat administrator to perform this action!\n"
-                    f"\nThis has nothing to do with Chrollo's rights; this is all about YOUR permissions as an admin. Chrollo respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Chrollo. Similarly, to change Chrollo settings, you need to have the Change group info permission.\n"
-                    f"\nThe message very clearly states that you need these rights - not Chrollo.",
+            text="""｢ Admin Permissions 」\n
+                 \nTo avoid slowing down, Chrollo caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Chrollo will only find out ~10 minutes later.
+                 \nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Chrollo to check who the admins are again and their permissions.
+                 \nIf you are getting a message saying:\nYou must be this chat administrator to perform this action!
+                 \nThis has nothing to do with Chrollo's rights; this is all about YOUR permissions as an admin. Chrollo respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Chrollo. Similarly, to change Chrollo settings, you need to have the Change group info permission.
+                 \nThe message very clearly states that you need these rights - not Chrollo.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -538,15 +537,15 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_luv":
         query.message.edit_text(
-            text=f"｢ Anti-Spam Settings 」\n"
-                     f"\nAntispam: "
-                     f"\nBy enabling this, you can protect your groups free from scammers/spammers.\nRun /antispam on in your chat to enable.\nAppeal Chat: @\n"
-                     f"\n✪ Anti-Flood allows you to keep your chat clean from flooding."
-                     f"\n✪ With the help of Blaclists you can blacklist words,sentences and stickers which you don't want to be used by group members."
-                     f"\n✪ By enabling Reports, admins get notified when users reports in chat."
-                     f"\n✪ Locks allows you to lock/restrict some comman items in telegram world."
-                     f"\n✪ Warnings allows to warn users and set auto-warns. "
-                     f"\n✪ Welcome Mute helps you prevent spambots or users flooding/spamming your group. Checl Greetings for more info",
+            text=f"""｢ Anti-Spam Settings 」\n
+            \nAntispam: 
+            \nBy enabling this, you can protect your groups free from scammers/spammers.\nRun /antispam on in your chat to enable.\nAppeal Chat: @Phantom_troupes\n
+            \n✪ Anti-Flood allows you to keep your chat clean from flooding.
+            \n✪ With the help of Blaclists you can blacklist words,sentences and stickers which you don't want to be used by group members.
+            \n✪ By enabling Reports, admins get notified when users reports in chat.
+            \n✪ Locks allows you to lock/restrict some comman items in telegram world.
+            \n✪ Warnings allows to warn users and set auto-warns. 
+            \n✪ Welcome Mute helps you prevent spambots or users flooding/spamming your group. Checl Greetings for more info""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -556,15 +555,15 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_lub":
         query.message.edit_text(
-            text=f" ｢ Terms and Conditions 」\n"
-                f"\nTo use this bot, You need to agree with Terms and Conditions.\n"
-                f"\n✪ If someone is spamming your group, you can use report feature from your Telegram Client."
-                f"\n✪ Make sure antiflood is enabled, so that users cannot flood/spam your chat."
-                f"\n✪ Do not spam commands, buttons, or anything in bot PM, else you will be Ignored by bot or Gbanned."
-                f"\n✪ If you need to ask anything about this bot or you need help, reach us at @Phantom_Troupes"
-                f"\n✪ Make sure you read rules and follow them when you join Phantom Troupes."
-                f"\n✪ Spamming in Phantom Troupes, will reward you GBAN and reported to Telegram as well.\n"
-                f"\nTerms & Conditions can be changed anytime.",
+            text=""" ｢ Terms and Conditions 」
+            \nTo use this bot, You need to agree with Terms and Conditions.
+            \n✪ If someone is spamming your group, you can use report feature from your Telegram Client.
+            \n✪ Make sure antiflood is enabled, so that users cannot flood/spam your chat.
+            \n✪ Do not spam commands, buttons, or anything in bot PM, else you will be Ignored by bot or Gbanned.
+            \n✪ If you need to ask anything about this bot or you need help, reach us at @Phantom_Troupes
+            \n✪ Make sure you read rules and follow them when you join Phantom Troupes.
+            \n✪ Spamming in Phantom Troupes, will reward you GBAN and reported to Telegram as well.
+            \nTerms & Conditions can be changed anytime.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -579,10 +578,10 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_lic":
         query.message.edit_text(
-            text=f"Chrollo is a powerful bot for managing groups with additional features.\n"
-              f"\nChrollo's Licensed Under The GNU (General Public License v3.0)\n"
-              f"\nIf you have any question about Chrollo,"
-              f"\nreach us at Support Chat.",
+            text="""Chrollo is a powerful bot for managing groups with additional features.
+            \nChrollo's Licensed Under The GNU (General Public License v3.0).
+            \nIf you have any question about Chrollo,
+            \nreach us at Support Chat.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
