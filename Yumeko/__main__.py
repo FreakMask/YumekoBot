@@ -258,6 +258,11 @@ def error_handler(update, context):
     # Finally, send the message
     context.bot.send_message(chat_id=OWNER_ID, text=message, parse_mode=ParseMode.HTML)
 
+SETUP_TXT = """｢ Setup Guide 」\n
+You can add me to your group by clicking this link and selecting the chat.\n
+Read Admin Permissions and Anti-spam for basic info.\n
+Read Detailed Setup Guide to learn about setting up the bot in detail. (Recommended)\n
+If you do need help with further instructions feel free to ask in @Phantom_Troupes."""
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
@@ -499,11 +504,7 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_setup":
         query.message.edit_text(
-            text=f"｢ Setup Guide 」\n"
-            f"You can add me to your group by clicking this link and selecting the chat.\n"
-            f"Read Admin Permissions and Anti-spam for basic info.\n"
-            f"Read Detailed Setup Guide to learn about setting up the bot in detail. (Recommended)\n"
-            f"If you do need help with further instructions feel free to ask in @Phantom_Troupes.",
+            SETUP_TXT,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
