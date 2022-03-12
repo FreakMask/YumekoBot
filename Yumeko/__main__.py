@@ -222,12 +222,12 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.raboutvideo(
-            YUMEKO_IMG, caption= "Baka, I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            YUMEKO_IMG, caption= "Filthy human, I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Phantom_Troupes")]]
+                [[InlineKeyboardButton(text="Support", url="https://t.me/Phantom_Troupes")]]
             ),
         )
         
@@ -313,7 +313,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
                 ),
             )
 
@@ -379,7 +379,7 @@ def yumeko_about_callback(update, context):
                             text="T & C", callback_data="yumeko_tc"
                         ),
                     ],
-                    [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="yumeko_back")],
+                    [InlineKeyboardButton(text="Back", callback_data="yumeko_back")],
                 ]
             ),
         )
@@ -398,9 +398,9 @@ def yumeko_about_callback(update, context):
             f"\n\n1.) first, add me to your group.\n"
             f"2.) then promote me as admin and give all permissions except anonymous admin.\n"
             f"3.) after promoting me, type /reload in group to update the admin list.\n"
-            f"4.) add @LunaAssistant to your group or type /join to invite her.\n"
-            f"5.) turn on the video chat first before start to play music.\n"
-            f"\n📌 if userbot doesn't join voice chat make sure voice chat is active, or type /leave then type /join again..",
+            f"4.) for any kind of problems head straight to @Phantom_Troupes.\n"
+            f"5.) make sure to read rules and follow them in Phantom Troupes.\n"
+            f"\n📌 Spamming, promotion are considered hostile in Phantom Troupes,and will result you in Gban and report to Telegram.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -503,17 +503,17 @@ def yumeko_about_callback(update, context):
                  f"\nYou can add me to your group by clicking this link and selecting the chat.\n"
                  f"\nRead Admin Permissions and Anti-spam for basic info.\n"
                  f"\nRead Detailed Setup Guide to learn about setting up the bot in detail. (Recommended)\n"
-                 f"\nIf you do need help with further instructions feel free to ask in @lunaXresso.",
+                 f"\nIf you do need help with further instructions feel free to ask in @Phantom_Troupes.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins Permissions", callback_data="luna_asu"),
-                    InlineKeyboardButton(text="Anti Spam", callback_data="luna_asi"),
+                    InlineKeyboardButton(text="Admins Permissions", callback_data="yumeko_admin"),
+                    InlineKeyboardButton(text="Anti Spam", callback_data="yumeko_spam"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="luna_"),
+                    InlineKeyboardButton(text="Back", callback_data="yumeko_back"),
                  
                  ]
                 ]
@@ -523,11 +523,11 @@ def yumeko_about_callback(update, context):
     elif query.data == "yumeko_del":
         query.message.edit_text(
             text=f"｢ Admin Permissions 」\n"
-                     f"\nTo avoid slowing down, Yumeko caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Yumeko will only find out ~10 minutes later.\n"
-                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Yumeko to check who the admins are again and their permissions\n"
+                     f"\nTo avoid slowing down, Chrollo caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Chrollo will only find out ~10 minutes later.\n"
+                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Chrollo to check who the admins are again and their permissions\n"
                     f"\nIf you are getting a message saying:\nYou must be this chat administrator to perform this action!\n"
-                    f"\nThis has nothing to do with Yumeko's rights; this is all about YOUR permissions as an admin. Yumeko respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Yumeko. Similarly, to change Yumeko settings, you need to have the Change group info permission.\n"
-                    f"\nThe message very clearly states that you need these rights - not Yumeko.",
+                    f"\nThis has nothing to do with Chrollo's rights; this is all about YOUR permissions as an admin. Chrollo respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Chrollo. Similarly, to change Chrollo settings, you need to have the Change group info permission.\n"
+                    f"\nThe message very clearly states that you need these rights - not Chrollo.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -560,9 +560,9 @@ def yumeko_about_callback(update, context):
                 f"\n✪ If someone is spamming your group, you can use report feature from your Telegram Client."
                 f"\n✪ Make sure antiflood is enabled, so that users cannot flood/spam your chat."
                 f"\n✪ Do not spam commands, buttons, or anything in bot PM, else you will be Ignored by bot or Gbanned."
-                f"\n✪ If you need to ask anything about this bot or you need help, reach us at @"
-                f"\n✪ Make sure you read rules and follow them when you join Support Chat."
-                f"\n✪ Spamming in Support Chat, will reward you GBAN and reported to Telegram as well.\n"
+                f"\n✪ If you need to ask anything about this bot or you need help, reach us at @Phantom_Troupes"
+                f"\n✪ Make sure you read rules and follow them when you join Phantom Troupes."
+                f"\n✪ Spamming in Phantom Troupes, will reward you GBAN and reported to Telegram as well.\n"
                 f"\nTerms & Conditions can be changed anytime.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -578,9 +578,9 @@ def yumeko_about_callback(update, context):
 
     elif query.data == "yumeko_lic":
         query.message.edit_text(
-            text=f"Yumeko is a powerful bot for managing groups with additional features.\n"
-              f"\nYumeko's Licensed Under The GNU (General Public License v3.0)\n"
-              f"\nIf you have any question about Luna,"
+            text=f"Chrollo is a powerful bot for managing groups with additional features.\n"
+              f"\nChrollo's Licensed Under The GNU (General Public License v3.0)\n"
+              f"\nIf you have any question about Chrollo,"
               f"\nreach us at Support Chat.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -599,8 +599,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi.. ɪ'ᴀᴍ Lᴜɴᴀ*
-                 \nHere is the [sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ](https://www Xhamster.com) .""",
+            text=""" Hi.. I'm the head of the Spiders*
+                 \nHere is the [Source Code](https://youtu.be/dQw4w9WgXcQ) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
